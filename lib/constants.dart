@@ -1,1 +1,2 @@
-const test = 'assets/images/logo-white.png';
+const boy = 'assets/images/BOY.png';
+const girl = 'assets/images/Girl.png';
