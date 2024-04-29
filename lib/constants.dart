@@ -3,3 +3,7 @@ const girl = 'assets/images/Girl.png';
 const english = 'assets/images/enhlish.png';
 const double genderWidth = 80;
 const double genderHeigh = 100;
+const girlback = 'assets/images/girls.png';
+const boyback = 'assets/images/boys.png';
+const alphpa = 'assets/images/alpha.png';
+const numbers = 'assets/images/numbers.png';

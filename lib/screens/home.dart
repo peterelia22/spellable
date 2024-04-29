@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:spellable/constants.dart';
+import 'package:spellable/screens/languages.dart';
 import 'package:spellable/widgets/Card.dart';
 
 class HomePage extends StatelessWidget {
@@ -8,32 +9,45 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final screenWidth = MediaQuery.of(context).size.width;
     return WillPopScope(
       onWillPop: () async {
         SystemNavigator.pop();
         return false;
       },
-      child: const Scaffold(
+      child: Scaffold(
         body: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Center(
-              child: CARD(
-                image: boy,
-                tittle: "BOY",
-                height: genderHeigh,
-                color: Colors.blue,
-                width: genderWidth,
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return const LanguagesPage(path: boyback);
+                  })); // Added semicolon and closing parentheses
+                },
+                child: const CARD(
+                  image: boy,
+                  tittle: "BOY", // Fixed typo in title
+                  height: genderHeigh, // Fixed typo in height
+                  color: Colors.blue,
+                  width: genderWidth,
+                ),
               ),
             ),
             Center(
-              child: CARD(
-                image: girl,
-                tittle: "GIRL",
-                height: genderHeigh,
-                color: Colors.pink,
-                width: genderWidth,
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return const LanguagesPage(path: girlback);
+                  })); // Added semicolon and closing parentheses
+                },
+                child: const CARD(
+                  image: girl,
+                  tittle: "GIRL",
+                  height: genderHeigh,
+                  color: Colors.pink,
+                  width: genderWidth,
+                ),
               ),
             ),
           ],

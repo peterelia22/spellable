@@ -19,39 +19,30 @@ class CARD extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {
-        Navigator.push(context, MaterialPageRoute(builder: (context) {
-          return LanguagesPage(
-            sound: 'assets/sounds/alpha/A.wav',
-          );
-        }));
-      },
-      child: Container(
-        width: 150,
-        height: 150,
-        decoration: BoxDecoration(
-          color: color,
-          borderRadius: BorderRadius.circular(16),
-        ),
-        child: Column(
-          mainAxisAlignment:
-              MainAxisAlignment.start, // Align children to the bottom
-          children: [
-            Image.asset(
-              image,
-              height: height,
-              width: width,
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Text(
-              tittle,
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
-            )
-          ],
-        ),
+    return Container(
+      width: 150,
+      height: 150,
+      decoration: BoxDecoration(
+        color: color,
+        borderRadius: BorderRadius.circular(16),
+      ),
+      child: Column(
+        mainAxisAlignment:
+            MainAxisAlignment.start, // Align children to the bottom
+        children: [
+          Image.asset(
+            image,
+            height: height,
+            width: width,
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          Text(
+            tittle,
+            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
+          )
+        ],
       ),
     );
   }

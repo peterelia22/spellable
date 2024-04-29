@@ -65,7 +65,7 @@ flutter:
     - assets/sounds/
     - assets/sounds/numbers/
     - assets/sounds/alpha/
-    - assets/sounds/family_members/
+   
     # - assets/sounds/phrases/
  
   # An image asset can refer to one or more resolution-specific "variants", see
