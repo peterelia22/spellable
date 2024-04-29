@@ -1,27 +1,43 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:spellable/constants.dart';
-import 'package:spellable/screens/languages.dart';
 import 'package:spellable/widgets/Card.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+  const HomePage({Key? key});
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Row(
-        children: [
-          Center(
-            child: CARD(
-              image: boy,
-              tittle: "BOY",
+    final screenWidth = MediaQuery.of(context).size.width;
+    return WillPopScope(
+      onWillPop: () async {
+        SystemNavigator.pop();
+        return false;
+      },
+      child: const Scaffold(
+        body: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Center(
+              child: CARD(
+                image: boy,
+                tittle: "BOY",
+                height: genderHeigh,
+                color: Colors.blue,
+                width: genderWidth,
+              ),
             ),
-          ),
-          SizedBox(
-            width: 25,
-          ),
-          CARD(image: girl, tittle: "GIRL")
-        ],
+            Center(
+              child: CARD(
+                image: girl,
+                tittle: "GIRL",
+                height: genderHeigh,
+                color: Colors.pink,
+                width: genderWidth,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

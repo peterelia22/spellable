@@ -2,9 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:spellable/screens/languages.dart';
 
 class CARD extends StatelessWidget {
-  const CARD({super.key, re, required this.image, required this.tittle});
+  const CARD({
+    super.key,
+    re,
+    required this.image,
+    required this.tittle,
+    required this.height,
+    required this.width,
+    required this.color,
+  });
   final String image;
   final String tittle;
+  final double height;
+  final double width;
+  final Color color;
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -17,7 +29,7 @@ class CARD extends StatelessWidget {
         width: 150,
         height: 150,
         decoration: BoxDecoration(
-          color: Colors.blue,
+          color: color,
           borderRadius: BorderRadius.circular(16),
         ),
         child: Column(
@@ -26,11 +38,11 @@ class CARD extends StatelessWidget {
           children: [
             Image.asset(
               image,
-              height: 100,
-              width: 80,
+              height: height,
+              width: width,
             ),
             SizedBox(
-              height: 20,
+              height: 10,
             ),
             Text(
               tittle,
