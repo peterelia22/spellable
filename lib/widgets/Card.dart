@@ -22,7 +22,9 @@ class CARD extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         Navigator.push(context, MaterialPageRoute(builder: (context) {
-          return LanguagesPage();
+          return LanguagesPage(
+            sound: 'assets/sounds/alpha/A.wav',
+          );
         }));
       },
       child: Container(
