@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:spellable/constants.dart';
+import 'package:spellable/screens/alphabeta.dart';
+import 'package:spellable/screens/numbers.dart';
 import 'package:spellable/widgets/languages.dart';
 
 class EnglishPage extends StatelessWidget {
@@ -26,11 +28,19 @@ class EnglishPage extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  languages(
-                    screenHeight: screenHeight,
-                    screenWidth: screenWidth,
-                    text: "alphabet",
-                    path: alphpa,
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
+                        return AlphaBetaPage();
+                      }));
+                    },
+                    child: languages(
+                      screenHeight: screenHeight,
+                      screenWidth: screenWidth,
+                      text: "alphabet",
+                      path: alphpa,
+                    ),
                   ),
                 ],
               ),
@@ -39,11 +49,19 @@ class EnglishPage extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  languages(
-                    screenHeight: screenHeight,
-                    screenWidth: screenWidth,
-                    text: 'numbers',
-                    path: numbers,
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
+                        return NumbersPage();
+                      }));
+                    },
+                    child: languages(
+                      screenHeight: screenHeight,
+                      screenWidth: screenWidth,
+                      text: 'numbers',
+                      path: numbers,
+                    ),
                   ),
                 ],
               ),
