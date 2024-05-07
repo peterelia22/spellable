@@ -7,3 +7,5 @@ const girlback = 'assets/images/girls.png';
 const boyback = 'assets/images/boys.png';
 const alphpa = 'assets/images/alpha.png';
 const numbers = 'assets/images/numbers.png';
+const logo = 'assets/images/logo-white.png';
+const logo2 = 'assets/images/kids.png';

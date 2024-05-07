@@ -35,7 +35,7 @@ class _SplashPageState extends State<SplashPage>
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          Image.asset('assets/images/logo-white.png'),
+          Image.asset(logo),
           const SizedBox(
             height: 15,
           ),
@@ -59,7 +59,9 @@ class _SplashPageState extends State<SplashPage>
       Navigator.push(
         context,
         MaterialPageRoute(builder: (context) {
-          return HomePage();
+          return HomePage(
+            path: logo2,
+          );
         }),
       );
     });
