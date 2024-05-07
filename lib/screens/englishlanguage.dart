@@ -18,7 +18,7 @@ class EnglishPage extends StatelessWidget {
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage(backgroundImagePath),
-            fit: BoxFit.fill, // You can change the BoxFit to fit your needs
+            fit: BoxFit.fill,
           ),
         ),
         child: Row(
@@ -32,13 +32,14 @@ class EnglishPage extends StatelessWidget {
                     onTap: () {
                       Navigator.push(context,
                           MaterialPageRoute(builder: (context) {
-                        return AlphaBetaPage();
+                        return AlphaBetaPage(
+                          path: backgroundImagePath,
+                        );
                       }));
                     },
                     child: languages(
                       screenHeight: screenHeight,
                       screenWidth: screenWidth,
-                      text: "alphabet",
                       path: alphpa,
                     ),
                   ),
@@ -53,13 +54,14 @@ class EnglishPage extends StatelessWidget {
                     onTap: () {
                       Navigator.push(context,
                           MaterialPageRoute(builder: (context) {
-                        return NumbersPage();
+                        return NumbersPage(
+                          path: backgroundImagePath,
+                        );
                       }));
                     },
                     child: languages(
                       screenHeight: screenHeight,
                       screenWidth: screenWidth,
-                      text: 'numbers',
                       path: numbers,
                     ),
                   ),

@@ -6,13 +6,12 @@ class languages extends StatelessWidget {
     super.key,
     required this.screenHeight,
     required this.screenWidth,
-    required this.text,
     required this.path,
   });
 
   final double screenHeight;
   final double screenWidth;
-  final String text;
+
   final String path;
   @override
   Widget build(BuildContext context) {
@@ -24,13 +23,6 @@ class languages extends StatelessWidget {
           width: screenWidth * 0.4,
         ),
         SizedBox(height: 10),
-        Text(
-          text,
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-            fontSize: 20,
-          ),
-        ),
       ],
     );
   }

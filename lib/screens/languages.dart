@@ -18,7 +18,7 @@ class LanguagesPage extends StatelessWidget {
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage(path), // Default background image
+            image: AssetImage(path),
             fit: BoxFit.fill,
           ),
         ),
@@ -37,7 +37,6 @@ class LanguagesPage extends StatelessWidget {
                 child: languages(
                   screenHeight: screenHeight,
                   screenWidth: screenWidth,
-                  text: "ENGLISH",
                   path: english,
                 ),
               ),

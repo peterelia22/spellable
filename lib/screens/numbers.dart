@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:spellable/models/item_model.dart';
 import 'package:spellable/widgets/item_widget.dart';
+import 'package:spellable/widgets/items_page.dart';
 
 class NumbersPage extends StatelessWidget {
-  const NumbersPage({super.key});
+  const NumbersPage({super.key, required this.path});
+  final String path;
   final List<ItemModel> numbers = const [
     ItemModel(
       sound: 'sounds/numbers/1.wav',
@@ -48,13 +50,7 @@ class NumbersPage extends StatelessWidget {
   ];
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ListView.builder(
-        itemCount: numbers.length, // itemCount should be here
-        itemBuilder: (context, index) {
-          return itemWidget(
-              item: numbers[index]); // Make sure to use the correct class name
-        },
-      ),
+      body: ItemsPage(path: path, numbers: numbers),
     );
   }
 }
